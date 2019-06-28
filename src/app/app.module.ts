@@ -11,6 +11,8 @@ import { AppComponent } from "./app.component";
 import { ItemsComponent } from "./components/items/items.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { AddItemComponent } from "./components/add-item/add-item.component";
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { AddItemComponent } from "./components/add-item/add-item.component";
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]
