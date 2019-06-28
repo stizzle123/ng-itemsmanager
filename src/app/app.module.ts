@@ -1,5 +1,5 @@
 import { ItemService } from "./services/item.service";
-import { environment } from "./../environments/environment";
+import { environment } from "./../environments/environment.prod";
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AngularFireModule } from "@angular/fire";
